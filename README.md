@@ -3,4 +3,4 @@ Build a "mimic" dict that maps each word that appears in the alice.txt file to a
 
 With the mimic dict, it's fairly easy to emit random text that mimics the original. Print a word, then look up what words might come next and pick one at random as the next work.
 
-For fun, feed your program to itself as input.g
+For fun, feed your program to itself as input.
