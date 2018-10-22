@@ -1,4 +1,6 @@
-#!/usr/bin/python -tt
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 # Copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
 # http://www.apache.org/licenses/LICENSE-2.0
@@ -46,26 +48,26 @@ import sys
 
 
 def mimic_dict(filename):
-  """Returns mimic dict mapping each word to list of words which follow it."""
-  # +++your code here+++
-  return
+    """Returns mimic dict mapping each word to list of words which follow it."""
+    # +++your code here+++
+    raise NotImplementedError("Get to Work!")
 
 
 def print_mimic(mimic_dict, word):
-  """Given mimic dict and start word, prints 200 random words."""
-  # +++your code here+++
-  return
+    """Given mimic dict and start word, prints 200 random words."""
+    # +++your code here+++
+    raise NotImplementedError("Get to Work!")
 
 
 # Provided main(), calls mimic_dict() and mimic()
 def main():
-  if len(sys.argv) != 2:
-    print 'usage: ./mimic.py file-to-read'
-    sys.exit(1)
+    if len(sys.argv) != 2:
+        print 'usage: python mimic.py file-to-read'
+        sys.exit(1)
 
-  dict = mimic_dict(sys.argv[1])
-  print_mimic(dict, '')
+    d = mimic_dict(sys.argv[1])
+    print_mimic(d, '')
 
 
 if __name__ == '__main__':
-  main()
+    main()
