@@ -8,7 +8,7 @@ For fun, feed your program to itself as input.
 # Workflow for this Assignment
 1. *Fork* this repository into your own personal github account.
 2. Then *Clone* your own repo to your local development machine.
-3. **NEW** For this assignment, create a separate branch named 'dev/your-github-username' for your commits. Complete the missing parts of the files to pass the built-in tests, use your new dev branch to commit.
-5. Commit your changes (with _meaningful_ commit messages e.g. not 'blah' or 'asdf' or 'updated code'), then `git push` back to your own github account.
-5. From your personal Github repo, create a pull request (PR) review.  Add your instructor (and any other optional reviewers such as TAs and Coaches) to your PR, so that they can get a notification.  If you don't recall how to add reviewer(s) to a PR, please refresh on [this article](https://help.github.com/articles/requesting-a-pull-request-review/)
+3. <span style="background-color:yellow">**NEW** For this assignment</span>, create a separate branch named `dev/your-github-username`, and checkout the branch. Complete the missing parts of the filess.
+5. Commit your changes (with _meaningful_ commit messages e.g. not 'blah' or 'asdf' or 'updated code'), then `git push` the branch back to your own github account.
+5. From your own Github repo, create a pull request (PR) from your dev branch to your own master.  Invite your instructor (and any other optional reviewers such as TAs and Coaches) to your PR, so that they can get a notification.  If you don't recall how to add reviewer(s) to a PR, please refresh on [this article](https://help.github.com/articles/requesting-a-pull-request-review/)
 6. Copy/Paste the URL link to your PR as your assignment submission.
