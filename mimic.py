@@ -54,7 +54,13 @@ def mimic_dict(filename):
 
 
 def print_mimic(mimic_dict, word):
-    """Given mimic dict and start word, prints 200 random words."""
+    """Given mimic dict and start word, prints 200 random words:
+        - Start with '' (empty string) as a seed word.
+        - Print the seed word
+        - Lookup this word in your mimic_dict and get it's value list
+        - Randomly select a new seed word from this word list
+        - Repeat this process 200 times
+    """
     # +++your code here+++
     raise NotImplementedError("Get to Work!")
 
