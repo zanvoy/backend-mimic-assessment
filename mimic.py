@@ -28,7 +28,7 @@ the first word in the file.
 With the mimic dict, it's fairly easy to emit random
 text that mimics the original. Print a word, then look
 up what words might come next and pick one at random as
-the next work.
+the next word.
 Use the empty string as the first word to prime things.
 If we ever get stuck with a word that is not in the dict,
 go back to the empty string to keep things moving.
