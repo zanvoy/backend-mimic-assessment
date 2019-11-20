@@ -46,23 +46,40 @@ columns, so the output looks better.
 import random
 import sys
 
+__author__ = "???"
 
-def mimic_dict(filename):
-    """Returns mimic dict mapping each word to list of words which follow it."""
+
+def create_mimic_dict(filename):
+    """Returns mimic dict mapping each word to list of words which follow it. 
+    For example:
+        Input: "I am a software developer, and I don't care who knows"
+        Output: 
+            {
+                "" : ["I"],
+                "I" : ["am", "don't"], 
+                "am": ["a"], 
+                "a": ["software"],
+                "software" : ["developer,"],
+                "developer," : ["and"],
+                "and" : ["I"],
+                "I" : ["don't"],
+                "don't" : ["care"],
+                "care" : ["who"],
+                "who" : ["knows"]
+            }
+    """
     # +++your code here+++
-    raise NotImplementedError("Get to Work!")
+    
 
-
-def print_mimic(mimic_dict, word):
-    """Given mimic dict and start word, prints 200 random words:
-        - Start with '' (empty string) as a seed word.
-        - Print the seed word
-        - Lookup this word in your mimic_dict and get it's value list
-        - Randomly select a new seed word from this word list
+def print_mimic(mimic_dict, start_word):
+    """Given a previously compiled mimic_dict and start_word, prints 200 random words:
+        - Print the start_word
+        - Lookup the start_word in your mimic_dict and get it's next-list
+        - Randomly select a new word from the next-list
         - Repeat this process 200 times
     """
     # +++your code here+++
-    raise NotImplementedError("Get to Work!")
+    pass
 
 
 # Provided main(), calls mimic_dict() and mimic()
@@ -71,7 +88,7 @@ def main():
         print 'usage: python mimic.py file-to-read'
         sys.exit(1)
 
-    d = mimic_dict(sys.argv[1])
+    d = create_mimic_dict(sys.argv[1])
     print_mimic(d, '')
 
 
