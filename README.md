@@ -1,6 +1,24 @@
 # Mimic 
 Build a "mimic" dict that maps each word that appears in the alice.txt file to a list of all the words that immediately follow that word in the file. The list of words can be be in any order and should include duplicates. So for example the key "and" might have the list ["then", "best", "then", "after", ...] listing all the words which came after "and" in the text.
 
+For development, use the short `imdev.txt` file.  When your python mimic dictionary is created from this file, it should look like this if you print it out:
+```python
+{
+    "" : ["I"],
+    "I" : ["am", "don't"], 
+    "am": ["a"], 
+    "a": ["software"],
+    "software" : ["developer,"],
+    "developer," : ["and"],
+    "and" : ["I"],
+    "I" : ["don't"],
+    "don't" : ["care"],
+    "care" : ["who"],
+    "who" : ["knows"]
+}
+```
+Notice that the first entry in the dicttionary above is the empty string `""`.  Since we are creating a dictionary of 'next' word lists, it implies that there exists a previous word key for each next-list value.  This of course is true, except in the case of the first entry of the dictionary. Use the empty string as a seed for the first entry in the dictionary.
+
 With the mimic dict, it's fairly easy to emit random text that mimics the original. Print a word, then look up what words might come next and pick one at random as the next word.
 
 For fun, feed your program to itself as input.
