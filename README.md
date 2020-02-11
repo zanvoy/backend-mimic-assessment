@@ -4,17 +4,16 @@ Build a "mimic" dict that maps each word that appears in the alice.txt file to a
 For development, use the short `imdev.txt` file.  When your python mimic dictionary is created from this file, it should look like this if you print it out:
 ```python
 {
-    "" : ["I"],
-    "I" : ["am", "don't"], 
-    "am": ["a"], 
-    "a": ["software"],
-    "software" : ["developer,"],
-    "developer," : ["and"],
-    "and" : ["I"],
-    "I" : ["don't"],
-    "don't" : ["care"],
-    "care" : ["who"],
-    "who" : ["knows"]
+    '' : ['I']
+    'a' : ['software']
+    'and' : ['I']
+    'developer,' : ['and']
+    'don't' : ['care']
+    'I' : ['am', "don't"]
+    'who' : ['knows"']
+    'am' : ['a']
+    'care' : ['who']
+    'software' : ['developer,']
 }
 ```
 Notice that the first entry in the dicttionary above is the empty string `""`.  Since we are creating a dictionary of 'next' word lists, it implies that there exists a previous word key for each next-list value.  This of course is true, except in the case of the first entry of the dictionary. Use the empty string as a seed for the first entry in the dictionary.
