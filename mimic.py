@@ -50,14 +50,14 @@ __author__ = "???"
 
 
 def create_mimic_dict(filename):
-    """Returns mimic dict mapping each word to list of words which follow it. 
+    """Returns mimic dict mapping each word to list of words which follow it.
     For example:
         Input: "I am a software developer, and I don't care who knows"
-        Output: 
+        Output:
             {
                 "" : ["I"],
-                "I" : ["am", "don't"], 
-                "am": ["a"], 
+                "I" : ["am", "don't"],
+                "am": ["a"],
                 "a": ["software"],
                 "software" : ["developer,"],
                 "developer," : ["and"],
@@ -68,7 +68,7 @@ def create_mimic_dict(filename):
             }
     """
     # +++your code here+++
-    
+
 
 def print_mimic(mimic_dict, start_word):
     """Given a previously compiled mimic_dict and start_word, prints 200 random words:
