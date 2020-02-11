@@ -8,7 +8,7 @@
 # Google's Python Class
 # http://code.google.com/edu/languages/google-python-class/
 
-"""Mimic pyquick exercise -- optional extra exercise.
+"""
 Google's Python Class
 
 Read in the file specified on the command line.
@@ -22,8 +22,8 @@ The list of words can be be in any order and should include
 duplicates. So for example the key "and" might have the list
 ["then", "best", "then", "after", ...] listing
 all the words which came after "and" in the text.
-We'll say that the empty string is what comes before
-the first word in the file.
+We'll say that the empty string "" is what comes before
+the first word in the file.  This will be the seed string.
 
 With the mimic dict, it's fairly easy to emit random
 text that mimics the original. Print a word, then look
@@ -62,7 +62,6 @@ def create_mimic_dict(filename):
                 "software" : ["developer,"],
                 "developer," : ["and"],
                 "and" : ["I"],
-                "I" : ["don't"],
                 "don't" : ["care"],
                 "care" : ["who"],
                 "who" : ["knows"]
