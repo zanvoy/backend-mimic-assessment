@@ -46,45 +46,38 @@ columns, so the output looks better.
 import random
 import sys
 
-__author__ = "???"
+__author__ = "Mike Gabbard"
 
 
 def create_mimic_dict(filename):
-    """Returns mimic dict mapping each word to list of words which follow it.
-    For example:
-        Input: "I am a software developer, and I don't care who knows"
-        Output:
-            {
-                "" : ["I"],
-                "I" : ["am", "don't"],
-                "am": ["a"],
-                "a": ["software"],
-                "software" : ["developer,"],
-                "developer," : ["and"],
-                "and" : ["I"],
-                "don't" : ["care"],
-                "care" : ["who"],
-                "who" : ["knows"]
-            }
-    """
-    # +++your code here+++
+    dict = {}
+    with open(filename, 'r') as file:
+        data = file.read()
+        data = data.split(' ')
+        dict[''] = [data[0]]
+        dict[data[-1]] = ['']
+        while len(data) > 1:
+            if data[0] in dict:
+                dict[data[0]].append(data[1])
+            else:
+                dict[data[0]] = [data[1]]
+            data.pop(0)
+    return dict
 
 
 def print_mimic(mimic_dict, start_word):
-    """Given a previously compiled mimic_dict and start_word, prints 200 random words:
-        - Print the start_word
-        - Lookup the start_word in your mimic_dict and get it's next-list
-        - Randomly select a new word from the next-list
-        - Repeat this process 200 times
-    """
-    # +++your code here+++
-    pass
+    output = ''
+    current_word = start_word
+    for i in range(200):
+        next_word = random.choice(mimic_dict[current_word])  
+        output += ' ' + next_word
+        current_word = next_word
+    print(output)
 
 
-# Provided main(), calls mimic_dict() and mimic()
 def main():
     if len(sys.argv) != 2:
-        print 'usage: python mimic.py file-to-read'
+        print('usage: python mimic.py file-to-read')
         sys.exit(1)
 
     d = create_mimic_dict(sys.argv[1])
